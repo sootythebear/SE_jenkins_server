@@ -42,8 +42,10 @@ Note: the setup takes about 5-10 minutes to configure, expect some additional ti
 This demo performs the following steps:
 
 1. Installs the Puppet agent via:
-`rpm -Uvh https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm
-yum -y install puppet-agent`
+```
+rpm -Uvh https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm
+yum -y install puppet-agent
+```
 
 2. Removes the `ipatables` configuration
 `iptables -F`
@@ -55,11 +57,13 @@ yum -y install puppet-agent`
 `/opt/puppetlabs/bin/puppet apply -v /vagrant/jenkins_install.pp`
 
 Contents of the `jenkins_install.pp` file:
-`class { 'jenkins':
+```
+class { 'jenkins':
   config_hash => {
-     'JENKINS_PORT' => { 'value' => '8000' },
-     'JENKINS_HTTPS_PORT' => { 'value' => '8001' },
-     'JENKINS_APJ_PORT' => { 'value' => '8001' },
-  }
-}`
+     'JENKINS_PORT' => { 'value' => '8000' },   
+     'JENKINS_HTTPS_PORT' => { 'value' => '8001' },  
+     'JENKINS_APJ_PORT' => { 'value' => '8001' },   
+  }  
+}
+```
 
