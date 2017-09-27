@@ -48,13 +48,19 @@ yum -y install puppet-agent
 ```
 
 2. Removes the `ipatables` configuration
-`iptables -F`
+```
+iptables -F
+```
 
 3. Pulls the `rtyler/jenkins` module from the Puppet Forge
-`/opt/puppetlabs/bin/puppet module install rtyler-jenkins`
+```
+/opt/puppetlabs/bin/puppet module install rtyler-jenkins
+```
 
 4. Applies the module and alters the `request` port
-`/opt/puppetlabs/bin/puppet apply -v /vagrant/jenkins_install.pp`
+```
+/opt/puppetlabs/bin/puppet apply -v /vagrant/jenkins_install.pp
+```
 
 Contents of the `jenkins_install.pp` file:
 ```
