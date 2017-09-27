@@ -57,7 +57,7 @@ iptables -F
 /opt/puppetlabs/bin/puppet module install rtyler-jenkins
 ```
 
-4. Applies the module and alters the `request` port
+4. Applies the module and alter the `request` port
 ```
 /opt/puppetlabs/bin/puppet apply -v /vagrant/jenkins_install.pp
 ```
